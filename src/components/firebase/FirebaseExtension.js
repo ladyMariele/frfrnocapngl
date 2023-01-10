@@ -21,29 +21,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getDatabase()
 
-function GetMessages()
+export function GetMessages()
 {
 
 }
 
-function SendMessage()
+export function SendMessage()
 {
 
 }
 
-function GetUsers()
+export function GetUsers()
 {
 
 }
 
-function GetUser()
+export function GetUser()
 {
 
 }
 
-export function AddUser()
+export function AddUser(name)
 {
     set(ref(db, 'users/' + '6'), {
-        name: 'mew'
+        name: name
     })
 }

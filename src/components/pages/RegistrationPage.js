@@ -6,7 +6,11 @@ function RegistrationPage()
 {
     const [ name, setName ] = useState("")
 
-    AddUser()
+    function handleSubmit(event)
+    {
+        event.preventDefault();
+        AddUser(name)
+    }
 
     return (
 
@@ -14,7 +18,7 @@ function RegistrationPage()
             <h1> Registration Page </h1>
             <h3>Enter your name:</h3>
 
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>Name:
                     <input 
                         type = "text"
