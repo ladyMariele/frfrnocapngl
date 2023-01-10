@@ -1,10 +1,27 @@
+import Footer from '../footer.js'
+
 function RegistrationPage()
 {
+    const [ name, setName ] = useState("")
+
     return (
 
         <div>
             <h1> Registration Page </h1>
+            <h3>Enter your name:</h3>
+
+            <form>
+                <label>Name:
+                    <input 
+                        type = "text"
+                        value = { name }
+                        onChange = { ( e ) => setName( e.value ) }
+                    />
+                </label>
+            </form>
+
             This is a registration page
+            <Footer />
         </div>
 
     )
