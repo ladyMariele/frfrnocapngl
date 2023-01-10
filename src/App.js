@@ -1,6 +1,8 @@
 import './App.css';
 import room from "./room.png";
 import Footer from './components/footer.js'
+import RegistrationPage from "./components/pages/RegistrationPage.js"
+import LandingPage from "./components/pages/LandingPage.js"
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         </a>
       </header>
       <Footer />
+      <RegistrationPage />
+      <LandingPage />
+
     </div>
   );
 }
