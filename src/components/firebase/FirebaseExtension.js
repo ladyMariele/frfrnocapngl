@@ -104,7 +104,7 @@ export function AddUser(name)
         name: name,
         key: key,
         messages: { 
-            0: {
+            message1 : {
                 message: "Welcome!",
                 isOpened: false
             }
