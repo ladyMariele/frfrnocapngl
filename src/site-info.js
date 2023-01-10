@@ -1,5 +1,5 @@
 const site = {
-    name : "frfrnocapngl"
+    name : "frfr nocap ngl"
 }
 
 export default site;

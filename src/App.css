@@ -1,5 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,15 +44,46 @@
   pointer-events: none;
 }
 
-body {
+/* body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .landing-page {
+  display: flex;
+  flex-direction: column;
   height: 926px;
   width: 428px;
   border: 1px solid #ccc;
+  justify-content: space-around;
+}
+
+.title h1 {
+  font-family: "Happy Monkey", sans-serif;
+  font-size:5.5rem;
+}
+
+.landing-btns {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  /* align-content: space-around; */
+  height: 30vmin;
+}
+
+button {
+  border: none;
+  height: 10vmin;
+  width: 40vmin;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
