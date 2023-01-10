@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import room from "./room.png";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Make mistakes now than later ;)</h1>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={room} className="Room-meme" alt="meme" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
