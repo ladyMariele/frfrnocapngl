@@ -88,7 +88,7 @@ export function AddUser(name)
        return;
     }
 
-    if(GetUser('oy5vuq6hisrc0') == null)
+    if(GetUser( userId ) == null)
     {
         AddUser(name)
         return;
