@@ -7,4 +7,4 @@ function RejectionPage()
     )
 }
 
-export default RejectionPage()
+export default RejectionPage
