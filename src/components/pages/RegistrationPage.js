@@ -9,8 +9,8 @@ function RegistrationPage()
     function handleSubmit(event)
     {
         event.preventDefault();
-        console.log(name)
-        AddUser(name)
+        console.log(event.target.name)
+        AddUser(event.target.name)
     }
 
     return (
@@ -22,6 +22,7 @@ function RegistrationPage()
             <form onSubmit={handleSubmit}>
                 <label>Name:
                     <input 
+                        name = "name"
                         type = "text"
                         value = { name }
                         onChange = { ( e ) => setName( e.value ) }
