@@ -6,7 +6,7 @@ function RejectionPage(props)
     return (
         <div>
             <h1>Rejection Page</h1>
-            <p>{ props.customText ? customText : rejectionText }</p>
+            <p>{ rejectionText }</p>
         </div>
     )
 }
