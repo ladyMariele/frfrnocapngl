@@ -1,5 +1,4 @@
 import './App.css';
-import room from "./room.png";
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Footer />
     </div>
   );
 }
