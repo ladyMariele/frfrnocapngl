@@ -1,4 +1,6 @@
 import './App.css';
+import room from "./room.png";
+import Footer from './components/footer.js'
 
 function App() {
   return (
