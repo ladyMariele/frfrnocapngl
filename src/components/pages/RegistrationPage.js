@@ -1,6 +1,6 @@
 import Footer from '../footer.js'
 import { useState } from 'react'
-import { AddUser } from '../firebase/FirebaseExtension.js'
+import { AddUser } from '../../firebase/FirebaseExtension.js'
 
 function RegistrationPage()
 {
