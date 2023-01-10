@@ -19,7 +19,7 @@ function RegistrationPage()
                         onChange = { ( e ) => setName( e.value ) }
                     />
                 </label>
-                <button type="submit"/>
+                <button type="submit"> Start Receiving Messages </button>
             </form>
 
             This is a registration page
