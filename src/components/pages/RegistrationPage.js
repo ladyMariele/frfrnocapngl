@@ -12,6 +12,7 @@ function RegistrationPage()
         event.preventDefault();
         alert(name)
         alert({name})
+        console.log({name})
         // console.log(event.target.name)
         // AddUser(event.target.name)
     }
