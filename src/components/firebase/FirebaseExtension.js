@@ -43,7 +43,29 @@ export function GetUser()
 
 export function AddUser(name)
 {
-    set(ref(db, 'users/' + '6'), {
+    let userId = GenerateRandomAlphaNumbericId()
+
+    set(ref(db, 'users/' + userId), {
         name: name
     })
+}
+
+function GenerateRandomAlphaNumbericId( length )
+{
+    // if length not specified, make it 13
+    length = length || 13
+
+    // create 2 random alpha numeric random string
+    // you need 2 because 1 string has only a random range around 9 - 12
+    // substr(2) removes the first 2 digits which is "0."
+    //
+    // https://www.geeksforgeeks.org/generate-random-alpha-numeric-string-in-javascript/
+
+    let randomAlpha1 = Math.random().toString( 36 ).substr( 2 )
+    let randomAlpha2 = Math.random().toString( 36 ).substr( 2 )
+
+    // combine both random alpha 
+    let randomAlphaCombined = randomAlpha1 + randomAlpha2
+
+    return randomAlphaCombined.substring(0, length)
 }
