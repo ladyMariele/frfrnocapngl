@@ -58,21 +58,40 @@ export function GetUser(userId)
     });
 }
 
+let recusionCount = 0
+let maxRecursion = 10
+
+function CheckSafetyRecursion()
+{
+    recusionCount++
+    
+    if( recursionCount >= maxRecursion )
+    {
+        console.log("Max recusion count reached. This means every new randomly generated alpha numeric id is owned by a user")
+        console.log("Try increasing alpha numeric length")
+        return false
+    }
+    
+    return true
+}
 
 export function AddUser(name)
 {
+    if(!CheckSafetyRecursion()) return
+
     let userId = GenerateRandomAlphaNumbericId()
     
-    if(GetUser('oy5vuq6hisrc0') == null)
+    if(GetUser( userId ) == "-1")
     {
-        console.log("user exists")
-        return;
+       console.log("A firebase error occured")
+       return;
     }
 
-    // if(GetUser( userId ) == null)
-    // {
-    //     AddUser(name)
-    // }
+    if(GetUser('oy5vuq6hisrc0') == null)
+    {
+        AddUser(name)
+        return;
+    }
 
     set(ref(db, userTable + userId), {
         name: name
