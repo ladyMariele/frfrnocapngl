@@ -3,6 +3,7 @@ import room from "./room.png";
 import Footer from './components/footer.js'
 import RegistrationPage from "./components/pages/RegistrationPage.js"
 import LandingPage from "./components/pages/LandingPage.js"
+import RejectionPage from './components/pages/RejectionPage';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       <Footer />
       <RegistrationPage />
       <LandingPage />
-
+      <RejectionPage />
     </div>
   );
 }
