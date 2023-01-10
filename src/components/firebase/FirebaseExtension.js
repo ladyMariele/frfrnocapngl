@@ -41,7 +41,7 @@ function GetUser()
 
 }
 
-function AddUser()
+export function AddUser()
 {
     set(ref(db, 'users/' + '6'), {
         name: 'mew'
