@@ -1,3 +1,5 @@
+import site from '../site-info.js'
+
 function Footer()
 {
     return (
