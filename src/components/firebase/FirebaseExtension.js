@@ -29,13 +29,13 @@ export function GetMessages()
 
 }
 
-export function SendMessage(userId, message)
-{
-    set(ref(db, messageTable + userId), {
-        name: name,
-        key: key
-    })
-}
+// export function SendMessage(userId, message)
+// {
+//     set(ref(db, messageTable + userId), {
+//         name: name,
+//         key: key
+//     })
+// }
 
 export function GetUsers()
 {
@@ -111,7 +111,7 @@ export function AddUser(name)
         }
     })
 
-    SendMessage()
+    // SendMessage()
 }
 
 function GenerateRandomAlphaNumbericId( length )
