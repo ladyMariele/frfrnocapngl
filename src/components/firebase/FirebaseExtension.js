@@ -18,19 +18,23 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
-const db = getDatabase()
+const app               = initializeApp(firebaseConfig)
+const db                = getDatabase()
 
-const userTable = 'users/'
+const userTable         = 'users/'
+const messageTable      = 'messages/'
 
 export function GetMessages()
 {
 
 }
 
-export function SendMessage()
+export function SendMessage(userId, message)
 {
-
+    set(ref(db, messageTable + userId), {
+        name: name,
+        key: key
+    })
 }
 
 export function GetUsers()
@@ -81,7 +85,8 @@ export function AddUser(name)
 {
 
     let userId = GenerateRandomAlphaNumbericId()
-    
+    let key = GenerateRandomAlphaNumbericId()
+
     // if(GetUser( userId ) == "-1")
     // {
     //    console.log("A firebase error occured")
@@ -96,8 +101,17 @@ export function AddUser(name)
     // }
 
     set(ref(db, userTable + userId), {
-        name: name
+        name: name,
+        key: key,
+        messages: { 
+            0: {
+                message: "Welcome!",
+                isOpened: false
+            }
+        }
     })
+
+    SendMessage()
 }
 
 function GenerateRandomAlphaNumbericId( length )
