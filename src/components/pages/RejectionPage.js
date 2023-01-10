@@ -1,14 +1,11 @@
-function RejectionPage(props)
+function RejectionPage()
 {
-
-    const rejectionText = "Sorry, but frfrnocapngl requires you to accept cookies";
-
-    props.customMessage = "Custom text"
-
     return (
         <div>
             <h1>Rejection Page</h1>
-            <p>{ props.customMessage ? rejectionText : props.customMessage }</p>
+            <p>
+                Sorry, but frfrnocapngl requires you to accept cookies
+            </p>
         </div>
     )
 }
