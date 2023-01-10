@@ -1,4 +1,5 @@
 import Footer from '../footer.js'
+import { useState } from 'react'
 
 function RegistrationPage()
 {
