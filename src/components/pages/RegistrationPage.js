@@ -7,13 +7,14 @@ function RegistrationPage()
 {
     const [ userName, setUserName ] = useState("")
 
-    function handleSubmit(event)
+    function handleSubmit( event )
     {
+        alert("submitting")
         event.preventDefault()
         AddUser( userName )
     }
     
-    function handleChange(event)
+    function handleChange( event )
     {
         setUserName( event.target.value )
     }
