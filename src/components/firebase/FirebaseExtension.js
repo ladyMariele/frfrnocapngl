@@ -90,6 +90,7 @@ export function AddUser(name)
 
     if(GetUser( userId ) == null)
     {
+        console.log("User existed, generation new user")
         AddUser(name)
         return;
     }

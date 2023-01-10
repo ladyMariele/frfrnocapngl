@@ -7,8 +7,6 @@ function RegistrationPage()
 {
     const [ userName, setUserName ] = useState("")
 
-    GetUser('4pg6z90poy70u')
-
     function handleSubmit( event )
     {
         event.preventDefault()
