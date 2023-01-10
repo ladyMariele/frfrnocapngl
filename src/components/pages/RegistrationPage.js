@@ -9,6 +9,7 @@ function RegistrationPage()
     function handleSubmit(event)
     {
         event.preventDefault();
+        console.log(name)
         AddUser(name)
     }
 
