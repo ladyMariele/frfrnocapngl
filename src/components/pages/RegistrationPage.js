@@ -9,8 +9,13 @@ function RegistrationPage()
 
     function handleSubmit(event)
     {
-        event.preventDefault();
-        AddUser(event.target.value)
+        event.preventDefault()
+        AddUser( userName )
+    }
+    
+    function handleChange(event)
+    {
+        setUserName( event.target.value )
     }
 
     return (
@@ -19,13 +24,13 @@ function RegistrationPage()
             <h1> Registration Page </h1>
             <h3>Enter your name:</h3>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={ handleSubmit }>
                 <label>Name:
                     <input 
                         name = "userName"
                         type = "text"
                         value = { userName }
-                        onChange = { handleSubmit }
+                        onChange = { handleChange }
                     />
                 </label>
                 <button type="submit"> Start Receiving Messages </button>
