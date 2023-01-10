@@ -4,9 +4,9 @@ function Footer()
 {
     return (
 
-        <div>
-            This is a footer {site.name}
-        </div>
+        <footer>
+            This is a footer { site.name }
+        </footer>
 
     )
 }
