@@ -58,26 +58,27 @@ export function GetUser(userId)
     });
 }
 
-let recusionCount = 0
-let maxRecursion = 10
+// WIP recursion checker
 
-function CheckSafetyRecursion()
-{
-    recusionCount++
+// let recusionCount = 0
+// let maxRecursion = 10
+
+// function CheckSafetyRecursion()
+// {
+//     recusionCount++
     
-    if( recursionCount >= maxRecursion )
-    {
-        console.log("Max recusion count reached. This means every new randomly generated alpha numeric id is owned by a user")
-        console.log("Try increasing alpha numeric length")
-        return false
-    }
+//     if( recursionCount >= maxRecursion )
+//     {
+//         console.log("Max recusion count reached. This means every new randomly generated alpha numeric id is owned by a user")
+//         console.log("Try increasing alpha numeric length")
+//         return false
+//     }
     
-    return true
-}
+//     return true
+// }
 
 export function AddUser(name)
 {
-    if(!CheckSafetyRecursion()) return
 
     let userId = GenerateRandomAlphaNumbericId()
     
