@@ -9,8 +9,9 @@ function RegistrationPage()
     function handleSubmit(event)
     {
         event.preventDefault();
-        console.log(event.target.name)
-        AddUser(event.target.name)
+        alert("name ${name}")
+        // console.log(event.target.name)
+        // AddUser(event.target.name)
     }
 
     return (
