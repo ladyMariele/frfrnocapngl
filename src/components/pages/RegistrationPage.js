@@ -6,6 +6,8 @@ function RegistrationPage()
 {
     const [ name, setName ] = useState("")
 
+    AddUser()
+
     return (
 
         <div>
