@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getDatabase, ref, onValue, set } from 'firebase/database'
+import { getDatabase, ref, onValue, set, get, child } from 'firebase/database'
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,6 +21,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getDatabase()
 
+const userTable = 'users/'
+
 export function GetMessages()
 {
 
@@ -36,16 +38,31 @@ export function GetUsers()
 
 }
 
-export function GetUser()
+export function GetUser(userId)
 {
+    get(child(ref(db), userTable+userId)).then((snapshot) => {
 
+        if(snapshot.exists())
+        {
+            console.log(snapshot.val())
+        }
+        else
+        {
+            console.log("user does not exist" + userTable+userId)
+        }
+
+    }).catch((error) => {
+        console.error(error);
+    });
 }
 
 export function AddUser(name)
 {
     let userId = GenerateRandomAlphaNumbericId()
+    
 
-    set(ref(db, 'users/' + userId), {
+
+    set(ref(db, userTable + userId), {
         name: name
     })
 }
