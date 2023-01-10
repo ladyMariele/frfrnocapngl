@@ -63,16 +63,16 @@ export function AddUser(name)
 {
     let userId = GenerateRandomAlphaNumbericId()
     
-    if(GetUser( userId ) == "-1")
-    {
-        console.log("Get user returned error")
-        return;
-    }
+    // if(GetUser( userId ) == "-1")
+    // {
+    //     console.log("Get user returned error")
+    //     return;
+    // }
 
-    if(GetUser( userId ) == null)
-    {
-        AddUser(name)
-    }
+    // if(GetUser( userId ) == null)
+    // {
+    //     AddUser(name)
+    // }
 
     set(ref(db, userTable + userId), {
         name: name
