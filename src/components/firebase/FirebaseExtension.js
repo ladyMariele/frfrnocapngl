@@ -44,23 +44,35 @@ export function GetUser(userId)
 
         if(snapshot.exists())
         {
-            console.log(snapshot.val())
+            return snapshot.val()
         }
         else
         {
-            console.log("user does not exist" + userTable+userId)
+            return null
         }
 
     }).catch((error) => {
-        console.error(error);
+
+        return "-1"
+
     });
 }
+
 
 export function AddUser(name)
 {
     let userId = GenerateRandomAlphaNumbericId()
     
+    if(GetUser( userId ) == "-1")
+    {
+        console.log("Get user returned error")
+        return;
+    }
 
+    if(GetUser( userId ) == null)
+    {
+        AddUser(name)
+    }
 
     set(ref(db, userTable + userId), {
         name: name
