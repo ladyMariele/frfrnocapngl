@@ -1,3 +1,4 @@
+import React from 'react'
 import Footer from '../footer.js'
 import { useState } from 'react'
 import { AddUser } from '../firebase/FirebaseExtension.js'
