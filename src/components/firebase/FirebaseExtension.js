@@ -82,18 +82,18 @@ export function AddUser(name)
 
     let userId = GenerateRandomAlphaNumbericId()
     
-    if(GetUser( userId ) == "-1")
-    {
-       console.log("A firebase error occured")
-       return;
-    }
+    // if(GetUser( userId ) == "-1")
+    // {
+    //    console.log("A firebase error occured")
+    //    return;
+    // }
 
-    if(GetUser( userId ) == null)
-    {
-        console.log("User existed, generation new user")
-        AddUser(name)
-        return;
-    }
+    // if(GetUser( userId ) == null)
+    // {
+    //     console.log("User existed, generation new user")
+    //     AddUser(name)
+    //     return;
+    // }
 
     set(ref(db, userTable + userId), {
         name: name
