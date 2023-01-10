@@ -5,7 +5,7 @@ function Footer()
     return (
 
         <footer>
-            This is a footer { site.name }
+            { site.name } &copy; 2023 - 2024
         </footer>
 
     )
