@@ -5,16 +5,12 @@ import { AddUser } from '../firebase/FirebaseExtension.js'
 
 function RegistrationPage()
 {
-    const [ name, setName ] = useState("")
+    const [ userName, setUserName ] = useState("")
 
     function handleSubmit(event)
     {
         event.preventDefault();
-        alert(name)
-        alert({name})
-        console.log({name})
-        // console.log(event.target.name)
-        // AddUser(event.target.name)
+        AddUser(event.target.value)
     }
 
     return (
@@ -26,10 +22,10 @@ function RegistrationPage()
             <form onSubmit={handleSubmit}>
                 <label>Name:
                     <input 
-                        name = "name"
+                        name = "userName"
                         type = "text"
-                        value = { name }
-                        onChange = { ( e ) => setName( e.value ) }
+                        value = { userName }
+                        onChange = { handleSubmit }
                     />
                 </label>
                 <button type="submit"> Start Receiving Messages </button>
