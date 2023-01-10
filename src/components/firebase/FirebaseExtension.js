@@ -63,11 +63,11 @@ export function AddUser(name)
 {
     let userId = GenerateRandomAlphaNumbericId()
     
-    // if(GetUser( userId ) == "-1")
-    // {
-    //     console.log("Get user returned error")
-    //     return;
-    // }
+    if(GetUser('oy5vuq6hisrc0') == null)
+    {
+        console.log("user exists")
+        return;
+    }
 
     // if(GetUser( userId ) == null)
     // {
