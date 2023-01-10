@@ -18,7 +18,7 @@ function RegistrationPage()
             <h1> Registration Page </h1>
             <h3>Enter your name:</h3>
 
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>Name:
                     <input 
                         type = "text"
