@@ -52,17 +52,18 @@
 } */
 
 .landing-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 926px;
   width: 428px;
   border: 1px solid #ccc;
-  justify-content: space-around;
 }
 
-.title h1 {
-  font-family: "Happy Monkey", sans-serif;
-  font-size:5.5rem;
+.title {
+  /* font-family: "Happy Monkey", sans-serif; */
+  /* font-size:5.5rem; */
+  padding: 40vmin 0;
 }
 
 .landing-btns {
@@ -78,12 +79,13 @@ button {
   border: none;
   height: 10vmin;
   width: 40vmin;
+  border-radius: 50px;
+  margin: 1vmin;
 }
 
 footer {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  bottom: .5vmin;
   width: 100%;
   text-align: center;
 }

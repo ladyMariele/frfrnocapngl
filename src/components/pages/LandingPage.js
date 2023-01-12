@@ -1,5 +1,6 @@
 import site from '../../site-info.js'
 import Footer from '../footer.js'
+import frlogo from '../../frlogo.svg'
 
 function LandingPage() {
 
@@ -7,7 +8,7 @@ function LandingPage() {
         <section className='landing-page'> 
 
             <div className='title'>
-                <h1>{site.name}</h1>
+                <img src={frlogo} /> 
             </div>
 
             <div className='landing-btns'>
